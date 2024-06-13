@@ -23,14 +23,6 @@ function Header() {
         </li>
         <li>
           <Link
-            href="/joinact"
-            className="underline underline-offset-4 hover:no-underline"
-          >
-            เข้าร่วมกิจกรรม
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/myact"
             className="underline underline-offset-4 hover:no-underline"
           >
