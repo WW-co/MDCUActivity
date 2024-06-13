@@ -5,12 +5,14 @@ import React, { useState } from 'react';
 interface FormData {
     Activity_Name: string;
     Detail: string;
+    Department: string;
 }
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
         Activity_Name: '',
         Detail: '',
+        Department: '',
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +33,7 @@ const ContactForm: React.FC = () => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="Activity_Name">Activity Name:</label>
-                <input
+                <input 
                     type="text"
                     id="Activity_Name"
                     name="Activity_Name"
@@ -47,6 +49,17 @@ const ContactForm: React.FC = () => {
                     id="Detail"
                     name="Detail"
                     value={formData.Detail}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+            <div>
+                <label htmlFor="Department">ฝ่าย:</label>
+                <input
+                    type="text"
+                    id="Department"
+                    name="Department"
+                    value={formData.Department}
                     onChange={handleChange}
                     required
                 />
