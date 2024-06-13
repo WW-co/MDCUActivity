@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
                     required
                 />
             </div>
-            <button className='text-center max-w-16 bg-purple-400 p-2 rounded-md text-white' type="submit">Submit</button>
+            <button className='hover:bg-purple-300 bg-purple-400 p-2 rounded-md text-white m-3' type="submit">Submit</button>
         </form>
     );
 };
