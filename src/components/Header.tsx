@@ -10,7 +10,7 @@ function Header() {
             href="/"
             className="underline underline-offset-4 hover:no-underline"
           >
-            Homepage
+            แดชบอร์ด
           </Link>
         </li>
         <li>

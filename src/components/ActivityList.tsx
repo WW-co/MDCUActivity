@@ -28,6 +28,12 @@ const baseActivities: Activity[] = [
         actID: "3",
         actName: "งง",
         department: "ฝ่ายนั้นแหละ"
+    },
+    {
+      actDetail: "ทดลอง",
+      actID: "4",
+      actName: "ไม่รู้ๆๆๆๆ",
+      department: "ฝ่ายนี้ไม่มีชื่อ"
     }
 ]
 
