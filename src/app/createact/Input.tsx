@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 
@@ -13,17 +13,16 @@ const ContactForm: React.FC = () => {
         Detail: '',
     });
 
-    const handleChange = (e: { target: { Activity_Name: string; value: string; }; }) => {
-        const { Activity_Name, value } = e.target;
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [Activity_Name]: value,
+            [name]: value,
         });
     };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(e.currentTarget)
         // Handle form submission logic
         console.log('Form data:', formData);
     };
@@ -31,18 +30,24 @@ const ContactForm: React.FC = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="Activity_Name">Activity_Name:</label>
+                <label htmlFor="Activity_Name">Activity Name:</label>
                 <input
                     type="text"
                     id="Activity_Name"
+                    name="Activity_Name"
+                    value={formData.Activity_Name}
+                    onChange={handleChange}
                     required
                 />
             </div>
             <div>
                 <label htmlFor="Detail">Detail:</label>
                 <input
-                    type="Detail"
+                    type="text"
                     id="Detail"
+                    name="Detail"
+                    value={formData.Detail}
+                    onChange={handleChange}
                     required
                 />
             </div>

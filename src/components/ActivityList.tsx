@@ -34,7 +34,19 @@ const baseActivities: Activity[] = [
       actID: "4",
       actName: "ไม่รู้ๆๆๆๆ",
       department: "ฝ่ายนี้ไม่มีชื่อ"
-    }
+    },
+    {
+      actDetail: "activityefesdf",
+      actID: "5",
+      actName: "awesfsehi",
+      department: "ฝ่ายAsdaweds"
+    },
+    {
+      actDetail: "activity2222",
+      actID: "6",
+      actName: "h;esaicfi",
+      department: "awpvecgerie"
+    },
 ]
 
 const ActivityList = () => {
