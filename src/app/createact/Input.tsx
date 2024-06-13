@@ -31,9 +31,9 @@ const ContactForm: React.FC = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div >
                 <label htmlFor="Activity_Name">Activity Name:</label>
-                <input 
+                <input className='m-1 bg-gradient-to-l from-slate-100 to-slate-200  rounded-xl'
                     type="text"
                     id="Activity_Name"
                     name="Activity_Name"
@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
             </div>
             <div>
                 <label htmlFor="Detail">Detail:</label>
-                <input
+                <input className='m-1 bg-gradient-to-l from-slate-100 to-slate-200  rounded-xl'
                     type="text"
                     id="Detail"
                     name="Detail"
@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
             </div>
             <div>
                 <label htmlFor="Department">ฝ่าย:</label>
-                <input
+                <input className='m-1 bg-gradient-to-l from-slate-100 to-slate-200  rounded-xl'
                     type="text"
                     id="Department"
                     name="Department"
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
                     required
                 />
             </div>
-            <button type="submit">Submit</button>
+            <button className='text-center max-w-16 bg-purple-400 p-2 rounded-md text-white' type="submit">Submit</button>
         </form>
     );
 };
