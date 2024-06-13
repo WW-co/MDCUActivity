@@ -30,9 +30,10 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="text-xl flex flex-col justify-center items-center" onSubmit={handleSubmit}>
             <div >
-                <label htmlFor="Activity_Name">Activity Name:</label>
+            <div >
+                <p htmlFor="Activity_Name">Activity Name:</p>
                 <input className='m-1 bg-gradient-to-l from-slate-100 to-slate-200  rounded-xl'
                     type="text"
                     id="Activity_Name"
@@ -40,10 +41,10 @@ const ContactForm: React.FC = () => {
                     value={formData.Activity_Name}
                     onChange={handleChange}
                     required
-                />
+                    />
             </div>
             <div>
-                <label htmlFor="Detail">Detail:</label>
+                <p htmlFor="Detail">Detail:</p>
                 <input className='m-1 bg-gradient-to-l from-slate-100 to-slate-200  rounded-xl'
                     type="text"
                     id="Detail"
@@ -51,10 +52,10 @@ const ContactForm: React.FC = () => {
                     value={formData.Detail}
                     onChange={handleChange}
                     required
-                />
+                    />
             </div>
             <div>
-                <label htmlFor="Department">ฝ่าย:</label>
+                <p htmlFor="Department">ฝ่าย:</p>
                 <input className='m-1 bg-gradient-to-l from-slate-100 to-slate-200  rounded-xl'
                     type="text"
                     id="Department"
@@ -62,8 +63,9 @@ const ContactForm: React.FC = () => {
                     value={formData.Department}
                     onChange={handleChange}
                     required
-                />
+                    />
             </div>
+                    </div>
             <button className='hover:bg-purple-300 bg-purple-400 p-2 rounded-md text-white m-3' type="submit">Submit</button>
         </form>
     );
