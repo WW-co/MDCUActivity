@@ -1,13 +1,14 @@
 import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
 
-export const users = pgTable('users', {
+export const activity = pgTable('Activities', {
   id: serial('id').primaryKey(),
-  fullName: text('full_name'),
-  phone: varchar('phone', { length: 256 }),
+  actName: text('Activities'),
+  actDetail: varchar('Details', { length: 256 }),
+  department: text('Department')
 });
 
 
-
+/*
 import { index, int, mysqlTable, bigint, varchar } from 'drizzle-orm/mysql-core';
 
 export const users = mysqlTable('users', {
@@ -22,4 +23,4 @@ export const authOtps = mysqlTable('auth_otp', {
   phone: varchar('phone', { length: 256 }),
   userId: int('user_id').references(() => users.id),
 });
-
+*/
