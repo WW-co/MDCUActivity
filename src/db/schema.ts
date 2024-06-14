@@ -1,4 +1,5 @@
-import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
+import { int } from "drizzle-orm/mysql-core";
+import { integer, pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
 
 export const activity = pgTable('Activities', {
   id: serial('id').primaryKey(),
@@ -6,6 +7,14 @@ export const activity = pgTable('Activities', {
   actDetail: varchar('actDetail', { length: 256 }),
   department: text('department'),
 });
+
+export const users = pgTable('Users', {
+  id: serial('id').primaryKey(),
+  name: text('Name'),
+  contact: varchar('Contact', { length: 256 }),
+});
+
+
 
 
 

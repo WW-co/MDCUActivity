@@ -15,6 +15,27 @@
       "when": 1718268583122,
       "tag": "0001_absent_valeria_richards",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1718335846797,
+      "tag": "0002_worried_hedge_knight",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1718336818544,
+      "tag": "0003_messy_iron_lad",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1718339241069,
+      "tag": "0004_boring_madripoor",
+      "breakpoints": true
     }
   ]
 }

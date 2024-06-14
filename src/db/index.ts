@@ -5,7 +5,7 @@ import * as schema from './schema';
 
 const connectionString = process.env.DATABASE_URL
 
-export const client = postgres(connectionString, {
+export const client = postgres( connectionString, {
      prepare: false,
      ssl: { rejectUnauthorized: false },
     })
