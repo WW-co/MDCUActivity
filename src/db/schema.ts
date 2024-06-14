@@ -14,6 +14,12 @@ export const users = pgTable('Users', {
   contact: varchar('Contact', { length: 256 }),
 });
 
+export const enrollment = pgTable('UsersActivities', {
+  id: serial('id').primaryKey(),
+  userId: text('userID'),
+  activityId: text('activityID'),
+});
+
 
 
 
