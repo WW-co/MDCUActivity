@@ -35,7 +35,7 @@ const ActivityList = () => {
     const [activities, setActivities] = useState<Activity[]>(baseActivities);
 
 if (!activities) {
-    return <div>No data ค่ะ!!!</div>
+    return <div>No data!!!</div>
 }
 
 return (
@@ -48,8 +48,7 @@ return (
             <Link href={`/myactivity/${activity.actID}`}>
               <div className="size-full min-h-64 border border-slate-800 shadow-lg rounded-2xl p-4">
                 <h3 className="text-2xl font-semibold">{activity.actName}</h3>
-                <h4 className="text-lg text-slate-600">{activity.actDetail}</h4>
-                <h4 className="text-lg text-slate-600">ผู้จัด: {activity.department}</h4>
+                <h4 className="text-lg mt-5 text-slate-600">By {activity.department}</h4>
               </div>
               </Link>
           );
@@ -58,6 +57,9 @@ return (
     </div>
   );
 };
+
+
+               
 
 
 

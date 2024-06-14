@@ -1,27 +1,45 @@
-'use client'
+'use client';
 
-import { useState } from "react";
+import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 interface Activity {
-    actID: string;
-    actName: string;
-    actDetail: string;
-    department: string;
+  id: string;
+  actName: string;
+  actDetail: string;
+  department: string;
 }
 
-const handleClick = () => {
-  alert('ที่นี่ไม่มีเกียรติบัตรให้คุณ');
-};
+export default function Page() {
+  const [activity, setActivity] = useState<Activity>();
+  const params = useParams<{ id: string }>();
 
-export default function Page({ params }: { params: { id: string }}) {
-    const [activity, setActivity] = useState<Activity>();
+  useEffect(() => {
+    
+    async function getActivityData() {
+      const res = await fetch(
+        '/api/activities/' + params.id
+      );
 
-    return <div className="w-full flex justify-center">
+      if (res.status !== 200) console.error("can't fetch data")
+
+      const data = await res.json();
+
+      if (data.activity) {
+        setActivity(data.activity[0] as Activity);
+      }
+    }
+
+    getActivityData();
+  }, []);
+
+  return <div className="w-full flex justify-center">
     <div className="w-2/3">
-      <h1 className="text-4xl font-bold">{params.id} {activity?.actID}</h1>
-      <h2 className="text-xl"> {activity?.actName}</h2>
-      <button  onClick={handleClick} className="text-white bg-purple-500 p-5 rounded-md hover:bg-purple-300">ออกเกียรติบัตร</button>
-    </div>
+      <h1 className='text-lg text-slate-500'>My Activity ยังไม่ได้แก้</h1>
+      
+      <h2 className="text-4xl mt-10 font-bold">{activity?.actName}</h2>
+      <h2 className="text-xl mt-10 bg-slate-200 p-5 rounded-md shadow-lg">{activity?.actDetail}</h2>
+      <button className='mt-10 bg-purple-500 p-3 rounded-md shadow-md text-white hover:bg-purple-400'>ออกเกียรติบัตร</button>
+  </div>
   </div>;
 }
-
