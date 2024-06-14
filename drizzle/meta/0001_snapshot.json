@@ -1,0 +1,49 @@
+{
+  "id": "2ac412f1-26fd-44f3-ba0a-f8ec720cdf06",
+  "prevId": "1620b8c0-6589-4a06-98a9-c0fe12d825c7",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.Activities": {
+      "name": "Activities",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "Activities": {
+          "name": "Activities",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Details": {
+          "name": "Details",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Department": {
+          "name": "Department",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
