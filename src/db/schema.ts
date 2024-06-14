@@ -2,10 +2,11 @@ import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
 
 export const activity = pgTable('Activities', {
   id: serial('id').primaryKey(),
-  actName: text('Activities'),
-  actDetail: varchar('Details', { length: 256 }),
-  department: text('Department')
+  actName: text('actName'),
+  actDetail: varchar('actDetail', { length: 256 }),
+  department: text('department'),
 });
+
 
 
 /*

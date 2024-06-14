@@ -1,59 +1,34 @@
 'use client'
 
 import Link from 'next/link';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Activity {
-    actID: string;
+    id: string;
     actName: string;
     actDetail: string;
     department: string;
 }
 
-const baseActivities: Activity[] = [
-    {
-        actDetail: "activity",
-        actID: "1",
-        actName: "hi",
-        department: "ฝ่ายA"
-    },
-    {
-        actDetail: "ไม่รู้",
-        actID: "2",
-        actName: "งาน",
-        department: "ฝ่ายB"
-    },
-    {
-        actDetail: "อันนี้งงมาก",
-        actID: "3",
-        actName: "งง",
-        department: "ฝ่ายนั้นแหละ"
-    },
-    {
-      actDetail: "ทดลอง",
-      actID: "4",
-      actName: "ไม่รู้ๆๆๆๆ",
-      department: "ฝ่ายนี้ไม่มีชื่อ"
-    },
-    {
-      actDetail: "activityefesdf",
-      actID: "5",
-      actName: "awesfsehi",
-      department: "ฝ่ายAsdaweds"
-    },
-    {
-      actDetail: "activity2222",
-      actID: "6",
-      actName: "h;esaicfi",
-      department: "awpvecgerie"
-    },
-]
-
 const ActivityList = () => {
-    const [activities, setActivities] = useState<Activity[]>(baseActivities);
+    const [activities, setActivities] = useState<Activity[]>();
+
+useEffect(() => {
+  const fetchActivities = async () => {
+      const response = await fetch('/api/activities');
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+      const data = await response.json();
+      setActivities(data.activities);
+    
+  };
+
+  fetchActivities();
+})
 
 if (!activities) {
-    return <div>No data ค่ะ!!!</div>
+    return <div>No data!!!</div>
 }
 
 return (
@@ -63,7 +38,7 @@ return (
       <div className="grid grid-cols-4 gap-2">
         {activities.map((activity) => {
           return (
-            <Link href={`/activity/${activity.actID}`}>
+            <Link href={`/activity/${activity.id}`}>
               <div className="size-full min-h-64 border border-slate-800 shadow-lg rounded-2xl p-4">
                 <h3 className="text-2xl font-semibold">{activity.actName}</h3>
                 <h4 className="text-lg text-slate-600">{activity.actDetail}</h4>

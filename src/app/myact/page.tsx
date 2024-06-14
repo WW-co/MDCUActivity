@@ -12,22 +12,22 @@ interface Activity {
 
 const baseActivities: Activity[] = [
     {
-        actDetail: "activity",
+        actDetail: "description1",
         actID: "1",
-        actName: "hi",
-        department: "ฝ่ายA"
+        actName: "Name1",
+        department: "A Club"
     },
     {
-        actDetail: "ไม่รู้",
+        actDetail: "description2",
         actID: "2",
-        actName: "งาน",
-        department: "ฝ่ายB"
+        actName: "Name2",
+        department: "B Club"
     },
     {
-        actDetail: "อันนี้งงมาก",
+        actDetail: "description3",
         actID: "3",
-        actName: "งง",
-        department: "ฝ่ายนั้นแหละ"
+        actName: "Name3",
+        department: "C Club"
     }
 ]
 
