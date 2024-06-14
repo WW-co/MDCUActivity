@@ -36,6 +36,27 @@
       "when": 1718339241069,
       "tag": "0004_boring_madripoor",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1718341172169,
+      "tag": "0005_rare_molecule_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1718341354090,
+      "tag": "0006_abnormal_proudstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1718345875025,
+      "tag": "0007_clean_kree",
+      "breakpoints": true
     }
   ]
 }
